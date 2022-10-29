@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemsproject:block/deepslate_topaz_ore"
+    }
+  }
+}

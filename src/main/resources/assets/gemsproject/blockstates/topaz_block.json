@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemsproject:block/topaz_block"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "item/crossbow",
+    "textures": {
+        "layer0": "gemsproject:item/topaz_crossbow_firework"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "gemsproject:topaz_shards"
+    }
+  },
+  "result": {
+    "item": "gemsproject:topaz",
+    "count": 1
+  }
+}

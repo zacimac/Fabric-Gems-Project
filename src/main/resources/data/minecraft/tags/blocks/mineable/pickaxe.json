@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "gemsproject:topaz_ore",
+    "gemsproject:topaz_block",
+    "gemsproject:deepslate_topaz_ore"
+  ]
+}
