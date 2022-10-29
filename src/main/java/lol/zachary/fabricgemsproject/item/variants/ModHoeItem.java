@@ -1,4 +1,4 @@
-package lol.zachary.fabricgemsproject.item.custom;
+package lol.zachary.fabricgemsproject.item.variants;
 
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ToolMaterial;

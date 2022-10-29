@@ -1,10 +1,11 @@
-package lol.zachary.fabricgemsproject.item;
+package lol.zachary.fabricgemsproject;
 
+import lol.zachary.fabricgemsproject.item.ModItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public enum ModToolMaterials implements ToolMaterial {
+public enum ToolMaterials implements ToolMaterial {
   TOPAZ(MiningLevels.IRON, 200, 6.0F, 2.0F, 14, Ingredient.ofItems(ModItems.TOPAZ));
 
   private final int miningLevel;
@@ -14,7 +15,7 @@ public enum ModToolMaterials implements ToolMaterial {
   private final int enchantability;
   private final Ingredient repairIngredient;
 
-  private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
+  private ToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
     this.miningLevel = miningLevel;
     this.itemDurability = itemDurability;
     this.miningSpeed = miningSpeed;

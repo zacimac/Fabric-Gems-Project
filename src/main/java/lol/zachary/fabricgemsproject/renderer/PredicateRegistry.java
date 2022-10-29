@@ -1,10 +1,8 @@
 package lol.zachary.fabricgemsproject.renderer;
 
-import lol.zachary.fabricgemsproject.GemsProject;
-import lol.zachary.fabricgemsproject.item.custom.ModCrossbowItem;
+import lol.zachary.fabricgemsproject.item.variants.ModCrossbowItem;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.item.CrossbowItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 

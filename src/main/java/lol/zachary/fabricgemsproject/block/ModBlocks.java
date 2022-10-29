@@ -1,6 +1,6 @@
 package lol.zachary.fabricgemsproject.block;
 
-import lol.zachary.fabricgemsproject.GemsProject;
+import lol.zachary.fabricgemsproject.MainInit;
 import lol.zachary.fabricgemsproject.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -34,15 +34,15 @@ public class ModBlocks {
   // # Block registration methods
   private static Block registerBlock(String name, Block block, ItemGroup group) {
     registerBlockItem(name, block, group);
-    return Registry.register(Registry.BLOCK, new Identifier(GemsProject.MOD_ID, name), block);
+    return Registry.register(Registry.BLOCK, new Identifier(MainInit.MOD_ID, name), block);
   }
 
   private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-    return Registry.register(Registry.ITEM, new Identifier(GemsProject.MOD_ID, name),
+    return Registry.register(Registry.ITEM, new Identifier(MainInit.MOD_ID, name),
         new BlockItem(block, new FabricItemSettings().group(group)));
   }
 
   public static void registerModBlocks() {
-    GemsProject.LOGGER.info("Registering ModBlocks for " + GemsProject.MOD_ID);
+    MainInit.LOGGER.info("Registering ModBlocks for " + MainInit.MOD_ID);
   }
 }
