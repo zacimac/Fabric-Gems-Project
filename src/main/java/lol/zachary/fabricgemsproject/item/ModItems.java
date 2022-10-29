@@ -39,24 +39,8 @@ public class ModItems {
     new ModHoeItem(ModToolMaterials.TOPAZ, 0, 0,
       new ModHoeItem.Settings().group(ModItemGroup.MOD_GROUP)));
 
-  public static final Item TOPAZ_CROSSBOW = registerItem("topaz_crossbow",
+  public static final ModCrossbowItem TOPAZ_CROSSBOW = (ModCrossbowItem) registerItem("topaz_crossbow",
     new ModCrossbowItem(new ModCrossbowItem.Settings().group(ModItemGroup.MOD_GROUP)));
-
-  private static void registerCrossbowModelPredicates(Item crossbowItem) {
-    ModelPredicateProviderRegistry.register(crossbowItem, new Identifier(GemsProject.MOD_ID,"pull"), (itemStack, clientWorld, livingEntity, seed) -> {
-      if (livingEntity == null) {
-        return 0;
-      } else
-        return CrossbowItem.isCharged(itemStack) ? 0.0F : (float) (itemStack.getMaxUseTime() - livingEntity.getItemUseTimeLeft()) /
-          (float) CrossbowItem.getPullTime(itemStack);
-    });
-    ModelPredicateProviderRegistry.register(crossbowItem, new Identifier(GemsProject.MOD_ID,"pulling"), (itemStack, clientWorld1, livingEntity, seed)
-      -> livingEntity != null && livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack && !CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F);
-    ModelPredicateProviderRegistry.register(crossbowItem, new Identifier(GemsProject.MOD_ID,"charged"), (itemStack, clientWorld, livingEntity, seed)
-      -> livingEntity != null && CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F);
-    ModelPredicateProviderRegistry.register(crossbowItem, new Identifier(GemsProject.MOD_ID,"firework"), (itemStack, clientWorld, livingEntity, seed)
-      -> livingEntity != null && CrossbowItem.isCharged(itemStack) && CrossbowItem.hasProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F);
-  }
 
 
   // Item registration methods  
@@ -66,9 +50,6 @@ public class ModItems {
 
   public static void registerModItems() {
     GemsProject.LOGGER.debug("Registering Mod Items for " + GemsProject.MOD_ID);
-
-    // Register model predicates
-    registerCrossbowModelPredicates(TOPAZ_CROSSBOW);
   }
 
 }

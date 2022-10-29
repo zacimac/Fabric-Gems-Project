@@ -19,9 +19,8 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "lol.zachary.fabricgemsproject.GemsProject"
-    ]
+    "main": [ "lol.zachary.fabricgemsproject.GemsProject" ],
+    "client": [ "lol.zachary.fabricgemsproject.ClientInit" ]
   },
   "mixins": [
     "fabricgemsproject.mixins.json"
